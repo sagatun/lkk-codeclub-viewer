@@ -55,5 +55,5 @@ jobs:
         with:
           deploy_key: ${{ secrets.NORWEGIANMANGO }}
           publish_branch: master
-          publish_dir: ./dist/lkk-oppgaver-nettside
+          publish_dir: ./dist
           external_repository: sagatun/lkk-oppgaver-nettside
