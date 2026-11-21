@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '10'
       - name: Clone exercises
-        run: git clone --depth=1 --branch=master https://github.com/kodeklubben/oppgaver.git ../oppgaver
+        run: git clone --depth=1 --branch=master https://github.com/sagatun/lkk-oppgaver.git ../oppgaver
       - name: Install Dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: yarn install
@@ -55,6 +55,5 @@ jobs:
         with:
           deploy_key: ${{ secrets.NORWEGIANMANGO }}
           publish_branch: master
-          publish_dir: ./dist
-          cname: oppgaver.kidsakoder.no
-          external_repository: kodeklubben/kodeklubben.github.io
+          publish_dir: ./dist/lkk-oppgaver-nettside
+          external_repository: sagatun/lkk-oppgaver-nettside
